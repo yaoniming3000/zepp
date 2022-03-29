@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog title="Email Request">
+		<beginButton>
+			<Button text="Send" press="onRequestVoucher" type="Accept"/>
+		</beginButton>
+		<endButton>
+			<Button text="Close" press="onCloseDialog" type="Reject"/>
+		</endButton>
+	<content>
+	    <sap.ui.layout:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="layout1">
+	        <sap.ui.layout:content>
+	            <TextArea xmlns="sap.m" class="sapUiTinyMarginBeginEnd" value="{EmailBody}" rows="6" id="area0" width="95%" placeholder="Put email body here..." editable="false"/>
+	        </sap.ui.layout:content>
+	    </sap.ui.layout:VerticalLayout>
+	</content>
+	</Dialog>
+</core:FragmentDefinition>

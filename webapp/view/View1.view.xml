@@ -1,0 +1,140 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:uxap="sap.uxap" controllerName="epp.epp.controller.View1" displayBlock="true">
+	<Shell id="shell" appWidthLimited="false" title="Bridgestone Family and Friends">
+		<App id="app">
+			<uxap:ObjectPageLayout id="objectPageLayout" alwaysShowContentHeader="true" showFooter="true">
+				<uxap:headerTitle>
+					<uxap:ObjectPageDynamicHeaderTitle>
+						<uxap:heading>
+							<Title text="Bridgestone Family and Friends"/>
+						</uxap:heading>
+						<uxap:expandedContent>
+							<ObjectAttribute text="{UserName}" id="attribute0_1647404956464" title="User"/>
+						</uxap:expandedContent>
+						<uxap:actions>
+							<Button xmlns="sap.m" id="button4" icon="sap-icon://message-information" press="onInfoBtn"/>
+						</uxap:actions>
+					</uxap:ObjectPageDynamicHeaderTitle>
+				</uxap:headerTitle>
+				<uxap:sections>
+					<uxap:ObjectPageSection id="off30" title="30% Discount">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection>
+								<uxap:blocks>
+									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" id="table0" items="{ path: '/VoucherSet' }" headerText="30% Discount" sticky="ColumnHeaders">
+										<items>
+											<ColumnListItem type="Active" id="item0">
+												<cells>
+													<HBox width="100%" id="hbox0" alignItems="Center">
+													    <items>
+															<Button xmlns="sap.m" text="Copy" id="button4_1648012275114" tooltip="Copy to clipboard" press="onCopyVoucher" enabled="{=${Status}==='X'?false:true}"/>
+															<ObjectIdentifier title="{VoucherCode}" id="attribute0" class="sapUiTinyMarginBegin"/>
+													    </items>
+													</HBox>													
+													<ObjectStatus xmlns="sap.m" text="{=${Status}==='X'?'Used':(${Status}===''?'Unused':'Unknown')}" state="{=${Status}==='X'?'Error':(${Status}===''?'Success':'Warning')}" id="status0"/>
+													<Text xmlns="sap.m" text="{ path: 'ValidFrom', type: 'sap.ui.model.type.Date', formatOptions: { style: 'short' } }" id="text6"/>
+													<Text xmlns="sap.m" text="{ path: 'ValidTo', type: 'sap.ui.model.type.Date', formatOptions: { style: 'short' } }" id="text7"/>
+													<TextArea xmlns="sap.m" value="{Comment}" growing="true" growingMaxLines="2" width="100%" id="input0" rows="1" maxLength="255"/>
+												</cells>
+											</ColumnListItem>
+										</items>
+										<columns>
+											<Column id="column1" width="auto">
+												<header>
+													<Label text="Voucher Code" id="label1"/>
+												</header>
+											</Column>
+											<Column id="column2" minScreenWidth="Desktop" demandPopin="true" popinDisplay="WithoutHeader" width="100px">
+												<header>
+													<Label text="Status" id="label2"/>
+												</header>
+											</Column>
+											<Column id="column0_1647337860397" minScreenWidth="Tablet" demandPopin="true" width="150px">
+												<header>
+													<Text text="Valid From" id="text3"/>
+												</header>
+											</Column>
+											<Column id="column1_1647337899937" minScreenWidth="Tablet" demandPopin="true" width="150px">
+												<header>
+													<Text text="Valid To" id="text4"/>
+												</header>
+											</Column>
+											<Column id="column2_1647337917037">
+												<header>
+													<Text text="Comment" id="text5"/>
+												</header>
+											</Column>
+										</columns>
+									</Table>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="off25" title="25% Discount">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection>
+								<uxap:blocks>
+									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" items="{ path: '/VoucherSet' }" id="table0_1647392825202" headerText="25% Discount" sticky="ColumnHeaders">
+										<items>
+											<ColumnListItem type="Active" id="item0_1647392825201">
+												<cells>
+													<HBox width="100%" alignItems="Center">
+													    <items>
+															<Button xmlns="sap.m" text="Copy" tooltip="Copy to clipboard" press="onCopyVoucher" enabled="{=${Status}==='X'?false:true}"/>
+															<ObjectIdentifier title="{VoucherCode}" class="sapUiTinyMarginBegin"/>
+													    </items>
+													</HBox>		
+													<ObjectStatus xmlns="sap.m" text="{=${Status}==='X'?'Used':(${Status}===''?'Unused':'Unknown')}" state="{=${Status}==='X'?'Error':(${Status}===''?'Success':'Warning')}"/>
+													<Text xmlns="sap.m" text="{ path: 'ValidFrom', type: 'sap.ui.model.type.Date', formatOptions: { style: 'short' } }"/>
+													<Text xmlns="sap.m" text="{ path: 'ValidTo', type: 'sap.ui.model.type.Date', formatOptions: { style: 'short' } }"/>
+													<TextArea xmlns="sap.m" value="{Comment}" growing="true" growingMaxLines="2" width="100%" rows="1" maxLength="255"/>
+												</cells>
+											</ColumnListItem>
+										</items>
+										<columns>
+											<Column width="auto">
+												<header>
+													<Label text="Voucher Code"/>
+												</header>
+											</Column>
+											<Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="WithoutHeader" width="100px">
+												<header>
+													<Label text="Status"/>
+												</header>
+											</Column>
+											<Column minScreenWidth="Tablet" demandPopin="true" width="150px">
+												<header>
+													<Text text="Valid From"/>
+												</header>
+											</Column>
+											<Column minScreenWidth="Tablet" demandPopin="true" width="150px">
+												<header>
+													<Text text="Valid To"/>
+												</header>
+											</Column>
+											<Column>
+												<header>
+													<Text text="Comment"/>
+												</header>
+											</Column>
+										</columns>
+									</Table>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+				<uxap:footer>
+					<OverflowToolbar>
+						<Button id="requestButton" text="Request More Vouchers" press="onOpenDialog" type="Emphasized"/>
+						<ToolbarSpacer/>
+						<Button id="saveButton" type="Accept" text="Save" press="onSave"/>
+					</OverflowToolbar>
+				</uxap:footer>
+				<uxap:headerContent>
+					<FormattedText htmlText="{Header>/HTML}"/>
+					<Image class="sapUiLargeMarginBegin" src="https://www.bridgestone.com.au/-/media/project/bridgestone-global/apac/bridgestone-au/bridgestone-family-and-friends-discount/screenshots/low-stock.jpg?rev=33d8af682766407e94d9145be2129caa&amp;hash=256C3A780C2512F7FC735F1DF545EE01" width="137px" height="41px" id="image1"/>
+				</uxap:headerContent>
+			</uxap:ObjectPageLayout>
+		</App>
+	</Shell>
+</mvc:View>
