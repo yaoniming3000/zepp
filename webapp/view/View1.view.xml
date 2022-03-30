@@ -11,7 +11,7 @@
 							<ObjectAttribute text="{UserName}" id="attribute0_1647404956464" title="User"/>
 						</uxap:expandedContent>
 						<uxap:actions>
-							<Button xmlns="sap.m" id="button4" icon="sap-icon://message-information" press="onInfoBtn"/>
+							<Button xmlns="sap.m" id="button4" icon="sap-icon://message-information" press="onInfoBtn" text="Information"/>
 						</uxap:actions>
 					</uxap:ObjectPageDynamicHeaderTitle>
 				</uxap:headerTitle>
@@ -20,7 +20,7 @@
 						<uxap:subSections>
 							<uxap:ObjectPageSubSection>
 								<uxap:blocks>
-									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" id="table0" items="{ path: '/VoucherSet' }" headerText="30% Discount" sticky="ColumnHeaders">
+									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" id="table0" items="{ path: '/VoucherSet' }" sticky="ColumnHeaders">
 										<items>
 											<ColumnListItem type="Active" id="item0">
 												<cells>
@@ -73,7 +73,7 @@
 						<uxap:subSections>
 							<uxap:ObjectPageSubSection>
 								<uxap:blocks>
-									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" items="{ path: '/VoucherSet' }" id="table0_1647392825202" headerText="25% Discount" sticky="ColumnHeaders">
+									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" items="{ path: '/VoucherSet' }" id="table0_1647392825202" sticky="ColumnHeaders">
 										<items>
 											<ColumnListItem type="Active" id="item0_1647392825201">
 												<cells>
