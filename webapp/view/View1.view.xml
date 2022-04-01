@@ -16,11 +16,11 @@
 					</uxap:ObjectPageDynamicHeaderTitle>
 				</uxap:headerTitle>
 				<uxap:sections>
-					<uxap:ObjectPageSection id="off30" title="30% Discount">
+					<uxap:ObjectPageSection id="off30" title="30% Discount" showTitle="false">
 						<uxap:subSections>
 							<uxap:ObjectPageSubSection>
 								<uxap:blocks>
-									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" id="table0" items="{ path: '/VoucherSet' }" sticky="ColumnHeaders">
+									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" id="table0" items="{ path: '/VoucherSet' }" sticky="ColumnHeaders" headerText="30% Discount">
 										<items>
 											<ColumnListItem type="Active" id="item0">
 												<cells>
@@ -69,11 +69,11 @@
 							</uxap:ObjectPageSubSection>
 						</uxap:subSections>
 					</uxap:ObjectPageSection>
-					<uxap:ObjectPageSection id="off25" title="25% Discount">
+					<uxap:ObjectPageSection id="off25" title="25% Discount" showTitle="false">
 						<uxap:subSections>
 							<uxap:ObjectPageSubSection>
 								<uxap:blocks>
-									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" items="{ path: '/VoucherSet' }" id="table0_1647392825202" sticky="ColumnHeaders">
+									<Table noDataText="Click 'Request More Vouchers' to request your discount codes" items="{ path: '/VoucherSet' }" id="table0_1647392825202" sticky="ColumnHeaders" headerText="25% Discount">
 										<items>
 											<ColumnListItem type="Active" id="item0_1647392825201">
 												<cells>
